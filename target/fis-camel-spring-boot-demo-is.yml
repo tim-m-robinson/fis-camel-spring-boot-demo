@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    name: fis-camel-spring-boot-demo
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: fis-camel-spring-boot-demo@sha256:d618423dfabfeb3572066d774dabb8e3c005b0f9152a2084794bd56c9e0957e7
+        namespace: test-fsi
+      name: latest
